@@ -17,6 +17,7 @@ get_data:
 
 facilities:
   - facility: kureha
+    enabled: true
     facility_keyword: 紅葉
     export_facility_name: ヴィラ紅葉
     hotel_smart:

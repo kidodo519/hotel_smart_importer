@@ -255,6 +255,10 @@ def main():
 
     facilities = config.get('facilities') or [config]
     for facility_config in facilities:
+        if not facility_config.get('enabled', True):
+            print(f"--------{facility_config['facility']} ホテルスマートデータ取得スキップ---------")
+            continue
+
         run_facility(config, facility_config, driver_path, options, date_config)
 
 

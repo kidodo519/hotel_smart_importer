@@ -1,0 +1,33 @@
+﻿facility: kureha
+
+csv:
+  input_directory: csv
+  output_directory: processed-csv
+  encoding: Shift_JIS
+
+path:
+  driver_path: C:\Users\kifunosato\Desktop\program\chromedriver-win32\chromedriver.exe
+  move_path: C:\Users\kifunosato\Desktop\s3_uploader_ec2\facility\kureha\csv
+  download_path: C:\Users\kifunosato\Downloads
+  exe_path: C:\Users\kifunosato\Desktop\s3_uploader_ec2\s3_uploader_ec2.exe
+
+get_data:
+  selenium: true
+  history: true
+  onhand: true
+  upload: true
+  manual_date: false #一度に取得できるのは3か月まで
+  manual_history_start_date: '2026/06/07'
+  manual_history_end_date: '2026/06/13'
+  manual_onhand_start_date: '2026/06/14'
+  manual_onhand_end_date: '2026/09/12'
+
+
+hotel_smart:
+  url: https://connect.hotelsmart.jp/host/sales/csv-output
+  id: xxxx
+  pw: xxxx
+
+webhook:
+  name: bot_kanon
+  url: https://hooks.slack.com/services/xxxxxx
